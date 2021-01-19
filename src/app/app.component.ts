@@ -1,91 +1,89 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: "my-app",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent  {
-  name = 'Angular';
-
-  people: any[] = [
-    {
-      "name": "Douglas  Pace",
-      "age": 35
-    },
-    {
-      "name": "Mcleod  Mueller",
-"age": 32
-    },
-    {
-      "name": "Day  Meyers",
-      "age": 21
-    },
-    {
-      "name": "Aguirre  Ellis",
-      "age": 34
-    },
-    {
-      "name": "Cook  Tyson",
-      "age": 32
-    }
-  ];
+export class AppComponent {
+  name = "Angular";
 
   people1: any[] = [
     {
-      "name": "Douglas  Pace",
-      "age": 35,
-      "country": 'MARS'
+      name: "Douglas  Pace",
+      age: 35
     },
     {
-      "name": "Mcleod  Mueller",
-      "age": 32,
-      "country": 'USA'
+      name: "Mcleod  Mueller",
+      age: 32
     },
     {
-      "name": "Day  Meyers",
-      "age": 21,
-      "country": 'HK'
-    },
-{
-      "name": "Aguirre  Ellis",
-      "age": 34,
-      "country": 'UK'
+      name: "Day  Meyers",
+      age: 21
     },
     {
-      "name": "Cook  Tyson",
-      "age": 32,
-      "country": 'USA'
+      name: "Aguirre  Ellis",
+      age: 34
+    },
+    {
+      name: "Cook  Tyson",
+      age: 32
     }
   ];
- 
+
+  people: any[] = [
+    {
+      name: "Douglas  Pace",
+      age: 35,
+      country: "MARS"
+    },
+    {
+      name: "Mcleod  Mueller",
+      age: 32,
+      country: "USA"
+    },
+    {
+      name: "Day  Meyers",
+      age: 21,
+      country: "HK"
+    },
+    {
+      name: "Aguirre  Ellis",
+      age: 34,
+      country: "UK"
+    },
+    {
+      name: "Cook  Tyson",
+      age: 32,
+      country: "USA"
+    }
+  ];
 
   peopleByCountry: any[] = [
     {
-      'country': 'UK',
-      'people': [
+      country: "UK",
+      people: [
         {
-          "name": "Douglas  Pace"
+          name: "Douglas  Pace"
         },
         {
-          "name": "Mcleod  Mueller"
-        },
+          name: "Mcleod  Mueller"
+        }
       ]
     },
     {
-      'country': 'US',
-      'people': [
+      country: "US",
+      people: [
         {
-          "name": "Day  Meyers"
+          name: "Day  Meyers"
         },
         {
-          "name": "Aguirre  Ellis"
+          name: "Aguirre  Ellis"
         },
         {
-          "name": "Cook  Tyson"
+          name: "Cook  Tyson"
         }
       ]
     }
   ];
-
 }

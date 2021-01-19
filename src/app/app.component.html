@@ -4,7 +4,7 @@
 </p>
 
 <h4>NgFor</h4>
-<ul *ngFor="let person of people">
+<ul *ngFor="let person of people1">
 	<li *ngIf="person.age < 30">
 
 		{{ person.name }} ({{ person.age }})
@@ -24,14 +24,24 @@
 </ul>
 
 <h4>NgSwitch</h4>
-<ul *ngFor="let person of people" [ngSwitch]="person.country"> ①
+<ul *ngFor="let person of people" [ngSwitch]="person.country">
 
-	<li *ngSwitchCase="'UK'" class="text-success">{{ person1.name }} ({{ person1.country }})
+	<li *ngSwitchCase="'UK'" class="text-success">{{ person.name }} ({{ person.country }})
 	</li>
-	<li *ngSwitchCase="'USA'" class="text-primary">{{ person1.name }} ({{ person1.country }})
+	<li *ngSwitchCase="'USA'" class="text-primary">{{ person.name }} ({{ person.country }})
 	</li>
-	<li *ngSwitchCase="'HK'" class="text-danger">{{ person1.name }} ({{ person1.country }})
+	<li *ngSwitchCase="'HK'" class="text-danger">{{ person.name }} ({{ person.country }})
 	</li>
-	<li *ngSwitchDefault class="text-warning">{{ person1.name }} ({{ person1.country }})
+	<li *ngSwitchDefault class="text-warning">{{ person.name }} ({{ person.country }})
 	</li>
 </ul>
+
+<h4>NgClass</h4>
+<ul *ngFor="let person of people">
+  <li [class.text-success]="person.country === 'UK'"
+      [class.text-primary]="person.country === 'USA'"
+      [class.text-danger]="person.country === 'HK'">{{ person.name }}
+({{ person.country }})
+  </li>
+</ul>
+
