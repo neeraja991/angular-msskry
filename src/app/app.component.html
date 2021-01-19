@@ -7,9 +7,9 @@
 <ul *ngFor="let person of people">
 	<li *ngIf="person.age < 30">
 
- {{ person.name }} ({{ person.age }})
+		{{ person.name }} ({{ person.age }})
 
- 
+
 	</li>
 </ul>
 
@@ -21,4 +21,17 @@
 			{{ person.name }}
 		</li>
 	</ul>
+</ul>
+
+<h4>NgSwitch</h4>
+<ul *ngFor="let person of people" [ngSwitch]="person.country"> ①
+
+	<li *ngSwitchCase="'UK'" class="text-success">{{ person1.name }} ({{ person1.country }})
+	</li>
+	<li *ngSwitchCase="'USA'" class="text-primary">{{ person1.name }} ({{ person1.country }})
+	</li>
+	<li *ngSwitchCase="'HK'" class="text-danger">{{ person1.name }} ({{ person1.country }})
+	</li>
+	<li *ngSwitchDefault class="text-warning">{{ person1.name }} ({{ person1.country }})
+	</li>
 </ul>
