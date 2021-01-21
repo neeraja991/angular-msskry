@@ -26,9 +26,9 @@
 <h4>NgSwitch</h4>
 <ul *ngFor="let person of people" [ngSwitch]="person.country">
 
-	<li *ngSwitchCase="'UK'" class="text-success">{{ person.name }} ({{ person.country }})
+	<li *ngSwitchCase="'UK'" class="blue">{{ person.name }} ({{ person.country }})
 	</li>
-	<li *ngSwitchCase="'USA'" class="text-primary">{{ person.name }} ({{ person.country }})
+	<li *ngSwitchCase="'USA'" class="red">{{ person.name }} ({{ person.country }})
 	</li>
 	<li *ngSwitchCase="'HK'" class="text-danger">{{ person.name }} ({{ person.country }})
 	</li>
@@ -38,10 +38,8 @@
 
 <h4>NgClass</h4>
 <ul *ngFor="let person of people">
-  <li [class.text-success]="person.country === 'UK'"
-      [class.text-primary]="person.country === 'USA'"
-      [class.text-danger]="person.country === 'HK'">{{ person.name }}
-({{ person.country }})
-  </li>
+	<li [class.text-success]="person.country === 'UK'" [class.text-primary]="person.country === 'USA'"
+		[class.text-danger]="person.country === 'HK'">{{ person.name }}
+		({{ person.country }})
+	</li>
 </ul>
-
